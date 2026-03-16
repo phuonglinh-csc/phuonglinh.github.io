@@ -1,102 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <title>Nguyễn Phương Linh | Portfolio</title>
-  
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
 
-body{
+*{
 margin:0;
-font-family:Arial, sans-serif;
-background:url("background.jpg") no-repeat center center/cover;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:url("background.jpg") center/cover fixed;
 color:#333;
 }
 
 /* NAVBAR */
 
 nav{
-background:rgba(0,0,0,0.7);
-color:white;
-padding:15px;
-position:sticky;
+position:fixed;
 top:0;
+width:100%;
+background:rgba(0,0,0,0.7);
+padding:15px;
+z-index:1000;
 }
 
 nav ul{
-list-style:none;
 display:flex;
 justify-content:center;
-gap:30px;
-margin:0;
-padding:0;
+gap:35px;
+list-style:none;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-font-weight:bold;
+font-weight:600;
 }
 
 /* HERO */
 
 .hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
-padding:80px 20px;
-background:rgba(255,255,255,0.85);
+background:rgba(0,0,0,0.45);
+color:white;
+padding:20px;
 }
 
 .avatar{
-width:170px;
-height:170px;
+width:180px;
+height:180px;
 border-radius:50%;
 object-fit:cover;
 border:5px solid white;
+margin-bottom:20px;
 }
 
-/* SECTIONS */
+.hero h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+/* SECTION */
 
 section{
-background:white;
-margin:40px auto;
-padding:40px;
 width:70%;
-border-radius:10px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
+margin:70px auto;
+padding:40px;
+border-radius:12px;
+background:rgba(255,255,255,0.93);
+backdrop-filter:blur(10px);
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
 h2{
+margin-bottom:20px;
 border-bottom:2px solid #eee;
-padding-bottom:5px;
+padding-bottom:8px;
 }
 
-/* SKILLS GRID */
+/* TIMELINE */
+
+.timeline{
+border-left:3px solid #ddd;
+padding-left:20px;
+}
+
+.timeline-item{
+margin-bottom:20px;
+}
+
+/* SKILLS */
+
+.skills-group{
+margin-bottom:20px;
+}
 
 .skills{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
+display:flex;
+flex-wrap:wrap;
+gap:10px;
 }
 
-.skill-box{
-background:#f4f4f4;
-padding:15px;
-border-radius:8px;
+.skill{
+background:#f1f1f1;
+padding:8px 15px;
+border-radius:20px;
+font-size:14px;
 }
 
-/* PROJECT CARDS */
+/* PROJECTS */
 
 .projects{
 display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:20px;
+grid-template-columns:1fr 1fr;
+gap:25px;
 }
 
 .project{
-background:#f8f8f8;
 padding:20px;
-border-radius:8px;
+border-radius:10px;
+background:#f8f8f8;
+transition:0.3s;
 }
+
+.project:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* LIST */
+
+ul{
+padding-left:20px;
+}
+
+li{
+margin:6px 0;
+}
+
+/* FOOTER */
 
 footer{
 text-align:center;
@@ -106,6 +165,7 @@ background:rgba(0,0,0,0.8);
 }
 
 </style>
+
 </head>
 
 <body>
@@ -113,9 +173,13 @@ background:rgba(0,0,0,0.8);
 <nav>
 <ul>
 <li><a href="#about">About</a></li>
+<li><a href="#goals">Goals</a></li>
 <li><a href="#education">Education</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
+<li><a href="#activities">Activities</a></li>
+<li><a href="#research">Research</a></li>
+<li><a href="#interests">Interests</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
@@ -127,7 +191,8 @@ background:rgba(0,0,0,0.8);
 
 <h1>Nguyễn Phương Linh</h1>
 
-<p>International Business Economics Student | Foreign Trade University</p>
+<p>International Business Economics Student</p>
+<p>Foreign Trade University</p>
 
 </div>
 
@@ -136,13 +201,24 @@ background:rgba(0,0,0,0.8);
 
 <h2>About Me</h2>
 
-<p>
-Hello! My name is Nguyễn Phương Linh, a second-year student majoring in International Economics at Foreign Trade University.
-</p>
+<p>Hello! My name is Nguyễn Phương Linh, a second-year student majoring in International Economics at Foreign Trade University.</p>
 
-<p>
-I am interested in international trade, global supply chains, and financial markets. I enjoy researching global economic trends and applying theoretical knowledge to real-world business situations.
-</p>
+<p>I am particularly interested in international trade, global supply chains, and financial markets. Through my academic journey, I have developed a solid foundation in economics, business analysis, and international trade policies.</p>
+
+<p>I enjoy working with data, researching global economic trends, and applying theoretical knowledge to real-world business situations.</p>
+
+<p>Currently, I am seeking internship opportunities in logistics, international business, or finance to gain practical experience and develop professional skills.</p>
+
+</section>
+
+
+<section id="goals">
+
+<h2>Career Goals</h2>
+
+<p>My long-term goal is to pursue a career in international business and global trade. I am especially interested in how international trade policies, logistics systems, and financial markets influence global supply chains.</p>
+
+<p>In the short term, I aim to gain practical experience through internships in logistics, international business, or financial analysis while strengthening my research and analytical skills.</p>
 
 </section>
 
@@ -151,17 +227,30 @@ I am interested in international trade, global supply chains, and financial mark
 
 <h2>Education</h2>
 
-<p><b>International Business Economics</b></p>
+<div class="timeline">
 
-<p>Foreign Trade University | 2024 – Present</p>
+<div class="timeline-item">
+
+<h3>International Business Economics</h3>
+
+<p><b>Foreign Trade University</b></p>
+
+<p>2024 – Present</p>
+
+<p><b>Relevant coursework:</b></p>
 
 <ul>
-<li>Microeconomics</li>
-<li>Macroeconomics</li>
+<li>Principles of Microeconomics</li>
+<li>Principles of Macroeconomics</li>
 <li>International Trade Theory</li>
+<li>Principles of Management</li>
 <li>Financial Accounting</li>
 <li>Business Statistics</li>
 </ul>
+
+</div>
+
+</div>
 
 </section>
 
@@ -170,37 +259,60 @@ I am interested in international trade, global supply chains, and financial mark
 
 <h2>Skills</h2>
 
+<div class="skills-group">
+
+<b>Professional Skills</b>
+
 <div class="skills">
-
-<div class="skill-box">
-<b>Professional</b>
-<ul>
-<li>Economic research</li>
-<li>Market analysis</li>
-<li>Business reports</li>
-</ul>
+<div class="skill">Economic research</div>
+<div class="skill">Market analysis</div>
+<div class="skill">Business report writing</div>
+<div class="skill">Data interpretation</div>
+<div class="skill">Academic research</div>
 </div>
 
-<div class="skill-box">
-<b>Technical</b>
-<ul>
-<li>Excel</li>
-<li>PowerPoint</li>
-<li>SQL</li>
-<li>Data visualization</li>
-</ul>
 </div>
 
-<div class="skill-box">
+<div class="skills-group">
+
+<b>Technical Skills</b>
+
+<div class="skills">
+<div class="skill">Microsoft Excel</div>
+<div class="skill">PowerPoint</div>
+<div class="skill">SQL</div>
+<div class="skill">Canva</div>
+<div class="skill">Data visualization</div>
+</div>
+
+</div>
+
+<div class="skills-group">
+
 <b>Languages</b>
-<ul>
-<li>Vietnamese</li>
-<li>English (IELTS 7.0)</li>
-<li>Chinese (HSK4)</li>
-</ul>
+
+<div class="skills">
+<div class="skill">Vietnamese (Native)</div>
+<div class="skill">English (IELTS 7.0)</div>
+<div class="skill">Chinese (HSK4)</div>
 </div>
 
 </div>
+
+</section>
+
+
+<section>
+
+<h2>Tools & Software</h2>
+
+<ul>
+<li>Microsoft Excel – data analysis and visualization</li>
+<li>PowerPoint – business presentations</li>
+<li>SQL – basic database queries</li>
+<li>Canva – presentation and visual design</li>
+<li>Google Workspace – collaborative documents</li>
+</ul>
 
 </section>
 
@@ -215,9 +327,21 @@ I am interested in international trade, global supply chains, and financial mark
 
 <h3>Coffee Export Market Analysis</h3>
 
-<p>
-Research on Vietnam's coffee export market to the EU, analyzing consumption trends, export performance, and trade policies.
-</p>
+<p>Research on Vietnam’s coffee export market to the EU, focusing on:</p>
+
+<ul>
+<li>EU coffee consumption trends</li>
+<li>Vietnam's export performance</li>
+<li>Trade policies affecting coffee exports</li>
+<li>Market opportunities for Vietnamese exporters</li>
+</ul>
+
+<p><b>Tools used:</b></p>
+
+<ul>
+<li>Excel for data analysis</li>
+<li>Academic journal research</li>
+</ul>
 
 </div>
 
@@ -225,13 +349,92 @@ Research on Vietnam's coffee export market to the EU, analyzing consumption tren
 
 <h3>Consumer Behavior Survey – Chocomax</h3>
 
-<p>
-Market research project analyzing consumer preferences for chocolate products using survey data.
-</p>
+<p>Conducted a market research survey to analyze consumer preferences for chocolate products.</p>
+
+<p><b>Responsibilities:</b></p>
+
+<ul>
+<li>Designing survey questions</li>
+<li>Collecting and analyzing responses</li>
+<li>Presenting findings through charts and reports</li>
+</ul>
+
+<p><b>Key findings:</b></p>
+
+<ul>
+<li>Consumer preference patterns</li>
+<li>Factors influencing purchase decisions</li>
+</ul>
 
 </div>
 
 </div>
+
+</section>
+
+
+<section id="activities">
+
+<h2>Leadership & Activities</h2>
+
+<p><b>Member of International Business Club - IBC FTU</b></p>
+
+<ul>
+<li>Participated in case study discussions</li>
+<li>Attended business workshops</li>
+<li>Joined networking events with students and professionals</li>
+</ul>
+
+<p>Skills developed:</p>
+
+<ul>
+<li>Team collaboration</li>
+<li>Public speaking</li>
+<li>Problem solving</li>
+</ul>
+
+</section>
+
+
+<section id="research">
+
+<h2>Research Interests</h2>
+
+<ul>
+<li>International trade policies</li>
+<li>Global supply chains and logistics</li>
+<li>EU–Vietnam trade relations</li>
+<li>Agricultural commodity exports</li>
+<li>Consumer behavior and market research</li>
+</ul>
+
+</section>
+
+
+<section id="interests">
+
+<h2>Interests</h2>
+
+<ul>
+<li>International trade and global economy</li>
+<li>Logistics and supply chain management</li>
+<li>Financial markets and investment</li>
+<li>Economic research</li>
+</ul>
+
+</section>
+
+
+<section>
+
+<h2>Personal Strengths</h2>
+
+<ul>
+<li>Strong analytical thinking</li>
+<li>Ability to interpret economic data</li>
+<li>Curiosity about global economic trends</li>
+<li>Adaptability and continuous learning</li>
+</ul>
 
 </section>
 
@@ -241,10 +444,8 @@ Market research project analyzing consumer preferences for chocolate products us
 <h2>Contact</h2>
 
 <p>Email: phuonglinh.csc@gmail.com</p>
-
 <p>LinkedIn: linkedin.com/in/linhnguyen</p>
-
-<p>Phone: 0988297813</p>
+<p>Mobile phone: 0988297813</p>
 
 </section>
 
