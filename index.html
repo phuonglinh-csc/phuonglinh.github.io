@@ -9,16 +9,10 @@
 
 <style>
 
-/* RESET */
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
 }
 
 body{
@@ -33,8 +27,9 @@ nav{
 position:fixed;
 top:0;
 width:100%;
-background:rgba(0,0,0,0.75);
+background:rgba(0,0,0,0.7);
 padding:15px;
+z-index:1000;
 }
 
 nav ul{
@@ -59,13 +54,14 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:rgba(0,0,0,0.5);
+background:rgba(0,0,0,0.45);
 color:white;
+padding:20px;
 }
 
 .avatar{
-width:170px;
-height:170px;
+width:180px;
+height:180px;
 border-radius:50%;
 object-fit:cover;
 border:5px solid white;
@@ -73,57 +69,63 @@ margin-bottom:20px;
 }
 
 .hero h1{
-font-size:40px;
+font-size:42px;
+margin-bottom:10px;
 }
 
 .hero p{
 font-size:18px;
-margin-top:5px;
-}
-
-.cv-btn{
-margin-top:20px;
-display:inline-block;
-padding:10px 25px;
-background:white;
-color:black;
-border-radius:25px;
-text-decoration:none;
 }
 
 /* SECTION */
 
 section{
 width:70%;
-margin:80px auto;
-background:white;
+margin:70px auto;
 padding:40px;
-border-radius:10px;
-box-shadow:0 10px 20px rgba(0,0,0,0.1);
+border-radius:12px;
+background:rgba(255,255,255,0.93);
+backdrop-filter:blur(10px);
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
 h2{
 margin-bottom:20px;
 border-bottom:2px solid #eee;
-padding-bottom:5px;
+padding-bottom:8px;
+}
+
+/* TIMELINE */
+
+.timeline{
+border-left:3px solid #ddd;
+padding-left:20px;
+}
+
+.timeline-item{
+margin-bottom:20px;
 }
 
 /* SKILLS */
+
+.skills-group{
+margin-bottom:20px;
+}
 
 .skills{
 display:flex;
 flex-wrap:wrap;
 gap:10px;
-margin-top:10px;
 }
 
 .skill{
 background:#f1f1f1;
 padding:8px 15px;
 border-radius:20px;
+font-size:14px;
 }
 
-/* PROJECT */
+/* PROJECTS */
 
 .projects{
 display:grid;
@@ -132,10 +134,18 @@ gap:25px;
 }
 
 .project{
-background:#f7f7f7;
 padding:20px;
 border-radius:10px;
+background:#f8f8f8;
+transition:0.3s;
 }
+
+.project:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* LIST */
 
 ul{
 padding-left:20px;
@@ -145,11 +155,13 @@ li{
 margin:6px 0;
 }
 
+/* FOOTER */
+
 footer{
 text-align:center;
 padding:30px;
-background:#111;
 color:white;
+background:rgba(0,0,0,0.8);
 }
 
 </style>
@@ -161,12 +173,17 @@ color:white;
 <nav>
 <ul>
 <li><a href="#about">About</a></li>
+<li><a href="#goals">Goals</a></li>
 <li><a href="#education">Education</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
+<li><a href="#activities">Activities</a></li>
+<li><a href="#research">Research</a></li>
+<li><a href="#interests">Interests</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
+
 
 <div class="hero">
 
@@ -177,9 +194,8 @@ color:white;
 <p>International Business Economics Student</p>
 <p>Foreign Trade University</p>
 
-<a href="#" class="cv-btn">Download CV</a>
-
 </div>
+
 
 <section id="about">
 
@@ -195,15 +211,33 @@ color:white;
 
 </section>
 
+
+<section id="goals">
+
+<h2>Career Goals</h2>
+
+<p>My long-term goal is to pursue a career in international business and global trade. I am especially interested in how international trade policies, logistics systems, and financial markets influence global supply chains.</p>
+
+<p>In the short term, I aim to gain practical experience through internships in logistics, international business, or financial analysis while strengthening my research and analytical skills.</p>
+
+</section>
+
+
 <section id="education">
 
 <h2>Education</h2>
 
-<p><b>International Business Economics</b></p>
+<div class="timeline">
 
-<p>Foreign Trade University</p>
+<div class="timeline-item">
+
+<h3>International Business Economics</h3>
+
+<p><b>Foreign Trade University</b></p>
 
 <p>2024 – Present</p>
+
+<p><b>Relevant coursework:</b></p>
 
 <ul>
 <li>Principles of Microeconomics</li>
@@ -214,11 +248,18 @@ color:white;
 <li>Business Statistics</li>
 </ul>
 
+</div>
+
+</div>
+
 </section>
+
 
 <section id="skills">
 
 <h2>Skills</h2>
+
+<div class="skills-group">
 
 <b>Professional Skills</b>
 
@@ -227,30 +268,54 @@ color:white;
 <div class="skill">Market analysis</div>
 <div class="skill">Business report writing</div>
 <div class="skill">Data interpretation</div>
+<div class="skill">Academic research</div>
 </div>
 
-<br>
+</div>
+
+<div class="skills-group">
 
 <b>Technical Skills</b>
 
 <div class="skills">
-<div class="skill">Excel</div>
+<div class="skill">Microsoft Excel</div>
 <div class="skill">PowerPoint</div>
 <div class="skill">SQL</div>
 <div class="skill">Canva</div>
+<div class="skill">Data visualization</div>
 </div>
 
-<br>
+</div>
+
+<div class="skills-group">
 
 <b>Languages</b>
 
 <div class="skills">
-<div class="skill">Vietnamese</div>
+<div class="skill">Vietnamese (Native)</div>
 <div class="skill">English (IELTS 7.0)</div>
 <div class="skill">Chinese (HSK4)</div>
 </div>
 
+</div>
+
 </section>
+
+
+<section>
+
+<h2>Tools & Software</h2>
+
+<ul>
+<li>Microsoft Excel – data analysis and visualization</li>
+<li>PowerPoint – business presentations</li>
+<li>SQL – basic database queries</li>
+<li>Canva – presentation and visual design</li>
+<li>Google Workspace – collaborative documents</li>
+</ul>
+
+</section>
+
 
 <section id="projects">
 
@@ -262,11 +327,20 @@ color:white;
 
 <h3>Coffee Export Market Analysis</h3>
 
+<p>Research on Vietnam’s coffee export market to the EU, focusing on:</p>
+
 <ul>
 <li>EU coffee consumption trends</li>
-<li>Vietnam export performance</li>
+<li>Vietnam's export performance</li>
 <li>Trade policies affecting coffee exports</li>
 <li>Market opportunities for Vietnamese exporters</li>
+</ul>
+
+<p><b>Tools used:</b></p>
+
+<ul>
+<li>Excel for data analysis</li>
+<li>Academic journal research</li>
 </ul>
 
 </div>
@@ -275,11 +349,21 @@ color:white;
 
 <h3>Consumer Behavior Survey – Chocomax</h3>
 
+<p>Conducted a market research survey to analyze consumer preferences for chocolate products.</p>
+
+<p><b>Responsibilities:</b></p>
+
 <ul>
-<li>Design survey questions</li>
-<li>Collect responses</li>
-<li>Analyze data</li>
-<li>Present findings with charts</li>
+<li>Designing survey questions</li>
+<li>Collecting and analyzing responses</li>
+<li>Presenting findings through charts and reports</li>
+</ul>
+
+<p><b>Key findings:</b></p>
+
+<ul>
+<li>Consumer preference patterns</li>
+<li>Factors influencing purchase decisions</li>
 </ul>
 
 </div>
@@ -287,6 +371,73 @@ color:white;
 </div>
 
 </section>
+
+
+<section id="activities">
+
+<h2>Leadership & Activities</h2>
+
+<p><b>Member of International Business Club - IBC FTU</b></p>
+
+<ul>
+<li>Participated in case study discussions</li>
+<li>Attended business workshops</li>
+<li>Joined networking events with students and professionals</li>
+</ul>
+
+<p>Skills developed:</p>
+
+<ul>
+<li>Team collaboration</li>
+<li>Public speaking</li>
+<li>Problem solving</li>
+</ul>
+
+</section>
+
+
+<section id="research">
+
+<h2>Research Interests</h2>
+
+<ul>
+<li>International trade policies</li>
+<li>Global supply chains and logistics</li>
+<li>EU–Vietnam trade relations</li>
+<li>Agricultural commodity exports</li>
+<li>Consumer behavior and market research</li>
+</ul>
+
+</section>
+
+
+<section id="interests">
+
+<h2>Interests</h2>
+
+<ul>
+<li>International trade and global economy</li>
+<li>Logistics and supply chain management</li>
+<li>Financial markets and investment</li>
+<li>Economic research</li>
+</ul>
+
+</section>
+
+
+<section>
+
+<h2>Personal Strengths</h2>
+
+<ul>
+<li>Strong analytical thinking</li>
+<li>Ability to interpret economic data</li>
+<li>Curiosity about global economic trends</li>
+<li>Adaptability and continuous learning</li>
+</ul>
+
+</section>
+
 
 <section id="contact">
 
@@ -297,6 +448,7 @@ color:white;
 <p>Mobile phone: 0988297813</p>
 
 </section>
+
 
 <footer>
 
